@@ -4,6 +4,8 @@ A single-file fullscreen slideshow of fat cats from [r/chonkers](https://www.red
 
 ![QR code](assets/qrcode.png)
 
+*Scan to open the repo on your phone.*
+
 ## Usage
 
 Open `index.html` in any browser — no server needed. Press `F` to go fullscreen.
