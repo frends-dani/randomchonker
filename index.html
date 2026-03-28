@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
 <title>chonkers</title>
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -108,16 +109,16 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 3px;
+    height: 2px;
     width: 100%;
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.4);
     transform-origin: left center;
-    z-index: 5;
+    z-index: 9;
   }
 
   @keyframes progress-tick {
-    from { width: 100%; }
-    to   { width: 0%;   }
+    from { transform: scaleX(1); }
+    to   { transform: scaleX(0); }
   }
 
   #status {
@@ -271,8 +272,9 @@
     cycleStartedAt = Date.now();
     const el = document.getElementById('progress');
     el.style.animation = 'none';
-    el.offsetWidth; // force reflow so the reset takes effect
-    el.style.animation = `progress-tick ${DURATION}ms linear forwards`;
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      el.style.animation = `progress-tick ${DURATION}ms linear forwards`;
+    }));
   }
 
   function pauseProgress() {

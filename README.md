@@ -4,6 +4,15 @@
 
 A single-file fullscreen slideshow of fat cats from [r/chonkers](https://www.reddit.com/r/chonkers/). Meant to run on a dedicated display with nothing but a browser.
 
+## Features
+
+- **Black background at all times** — no white flash during transitions, even while loading
+- **Crossfade** between photos
+- **Deduplication** — tracks the last 400 seen post IDs in `localStorage` and prefers unseen ones; resets automatically after a full loop
+- **Pagination** — fetches more posts from Reddit as it runs low on unseen ones
+- **QR code overlay** — pause shows a QR code linking to the original Reddit post, plus a "next photo" button
+- **No dependencies, no build step** — just one HTML file
+
 ## Usage
 
 Open `index.html` in any browser — no server needed. Press `F` to go fullscreen.
@@ -29,18 +38,9 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/frends-dani/randomchon
 | Space / Arrow keys / Enter | Skip to next photo (resumes if paused) |
 | `F` | Toggle fullscreen |
 
-## Features
-
-- **Black background at all times** — no white flash during transitions, even while loading
-- **Crossfade** between photos
-- **Deduplication** — tracks the last 400 seen post IDs in `localStorage` and prefers unseen ones; resets automatically after a full loop
-- **Pagination** — fetches more posts from Reddit as it runs low on unseen ones
-- **QR code overlay** — pause shows a QR code linking to the original Reddit post, plus a "next photo" button
-- **No dependencies, no build step** — just one HTML file
-
 ![QR code](assets/qrcode.png)
 
-*Scan to open the repo on your phone.*
+*Click (or tap) anywhere on the photo to pause and show a QR code linking to the original Reddit post of the current chonker.*
 
 ## Configuration
 
