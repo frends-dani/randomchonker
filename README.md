@@ -6,14 +6,7 @@ A single-file fullscreen slideshow of fat cats from [r/chonkers](https://www.red
 
 ## Usage
 
-Open `index.html` directly in Firefox — no server needed. Chrome blocks cross-origin requests from `file://` URLs, so if you're using Chrome you'll need a local server:
-
-```bash
-python3 -m http.server 8080
-# then open http://localhost:8080
-```
-
-Press `F` to go fullscreen.
+Open `index.html` in any browser — no server needed. Press `F` to go fullscreen.
 
 ## Controls
 

@@ -27,7 +27,6 @@ A single HTML file (`index.html`) with no external dependencies and no build ste
 
 - Source: `https://www.reddit.com/r/{SUBREDDIT}/hot.json?limit=100&raw_json=1`
 - `raw_json=1` prevents Reddit from HTML-encoding URLs in the response.
-- Works from a `file://` URL in Firefox. Chrome blocks cross-origin requests from `file://` and requires a local server.
 - Pagination: the `after` token from each response is used to fetch subsequent pages. When the response contains no `after` value, no further fetches are attempted until a loop-around reset occurs.
 - Posts are filtered to image-only: include only posts where `post_hint === 'image'` or where `url` matches `/\.(jpe?g|png|gif|webp)(\?|$)/i`, AND `is_video` and `is_gallery` are both false.
 - Image URL extraction: prefer `preview.images[0].source.url` (full-resolution Reddit-hosted preview); fall back to `post.url` if it matches the image extension pattern.
