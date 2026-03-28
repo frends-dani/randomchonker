@@ -1,0 +1,74 @@
+{
+  "data": {
+    "children": [
+      {
+        "data": {
+          "id": "post_alpha",
+          "title": "Absolute unit of a cat",
+          "url": "https://i.redd.it/alpha.jpg",
+          "score": 500,
+          "is_video": false,
+          "is_gallery": false,
+          "post_hint": "image",
+          "preview": {
+            "images": [{ "source": { "url": "https://i.redd.it/alpha.jpg" } }]
+          }
+        }
+      },
+      {
+        "data": {
+          "id": "post_bravo",
+          "title": "My neighbor's chonky boy",
+          "url": "https://i.redd.it/bravo.jpg",
+          "score": 300,
+          "is_video": false,
+          "is_gallery": false,
+          "post_hint": "image",
+          "preview": {
+            "images": [{ "source": { "url": "https://i.redd.it/bravo.jpg" } }]
+          }
+        }
+      },
+      {
+        "data": {
+          "id": "post_charlie",
+          "title": "He sits where he fits",
+          "url": "https://i.redd.it/charlie.jpg",
+          "score": 200,
+          "is_video": false,
+          "is_gallery": false,
+          "post_hint": "image",
+          "preview": {
+            "images": [{ "source": { "url": "https://i.redd.it/charlie.jpg" } }]
+          }
+        }
+      },
+      {
+        "data": {
+          "id": "post_video_skip",
+          "title": "This should be filtered out",
+          "url": "https://v.redd.it/somevideo",
+          "score": 999,
+          "is_video": true,
+          "is_gallery": false,
+          "post_hint": "hosted:video"
+        }
+      },
+      {
+        "data": {
+          "id": "post_delta",
+          "title": "Round boi on a chair",
+          "url": "https://i.redd.it/delta.png",
+          "score": 150,
+          "is_video": false,
+          "is_gallery": false,
+          "post_hint": "image",
+          "preview": {
+            "images": [{ "source": { "url": "https://i.redd.it/delta.png" } }]
+          }
+        }
+      }
+    ],
+    "after": null
+  }
+}
