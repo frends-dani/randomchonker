@@ -103,6 +103,23 @@
     color: rgba(255,255,255,0.9);
   }
 
+  /* ── Progress bar ───────────────────────────────────────────── */
+  #progress {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.35);
+    transform-origin: left center;
+    z-index: 5;
+  }
+
+  @keyframes progress-tick {
+    from { width: 100%; }
+    to   { width: 0%;   }
+  }
+
   #status {
     position: fixed;
     bottom: 1.5rem;
@@ -133,6 +150,7 @@
   </div>
 </div>
 
+<div id="progress"></div>
 <div id="status"></div>
 
 <script>
@@ -245,6 +263,23 @@
     statusTimer = setTimeout(() => el.classList.remove('show'), 3000);
   }
 
+  // ── Progress bar ──────────────────────────────────────────────
+  function startProgress() {
+    const el = document.getElementById('progress');
+    el.style.animation = 'none';
+    el.offsetWidth; // force reflow so the reset takes effect
+    el.style.animation = `progress-tick ${DURATION}ms linear forwards`;
+  }
+
+  function pauseProgress() {
+    const el = document.getElementById('progress');
+    el.style.animationPlayState = 'paused';
+  }
+
+  function resumeProgress() {
+    startProgress(); // resume always restarts the full timer, so restart bar too
+  }
+
   // ── QR overlay ────────────────────────────────────────────────
   function showQR() {
     if (!currentPost) return;
@@ -266,12 +301,14 @@
   function pause() {
     paused = true;
     clearTimeout(cycleTimer);
+    pauseProgress();
     showQR();
   }
 
   function resume() {
     paused = false;
     hideQR();
+    resumeProgress();
     schedule(DURATION);
   }
 
@@ -316,6 +353,7 @@
       curEl.classList.remove('visible');
       current = nextId;
       currentPost = post;
+      startProgress();
 
       // prefetch next batch when running low
       const unseenLeft = posts.filter(p => !getSeen().has(p.id)).length;
