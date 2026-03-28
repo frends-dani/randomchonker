@@ -2,6 +2,8 @@
 
 A single-file fullscreen slideshow of fat cats from [r/chonkers](https://www.reddit.com/r/chonkers/). Meant to run on a dedicated display with nothing but a browser.
 
+![QR code](assets/qrcode.png)
+
 ## Usage
 
 Open `index.html` in a browser. Due to browser CORS rules, fetching from Reddit won't work when opened directly as a `file://` URL in Chrome — the easiest fix is a one-liner local server:
