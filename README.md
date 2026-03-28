@@ -6,14 +6,12 @@ A single-file fullscreen slideshow of fat cats from [r/chonkers](https://www.red
 
 ## Usage
 
-Open `index.html` in a browser. Due to browser CORS rules, fetching from Reddit won't work when opened directly as a `file://` URL in Chrome — the easiest fix is a one-liner local server:
+Open `index.html` directly in Firefox — no server needed. Chrome blocks cross-origin requests from `file://` URLs, so if you're using Chrome you'll need a local server:
 
 ```bash
 python3 -m http.server 8080
 # then open http://localhost:8080
 ```
-
-Firefox is more permissive and will work with a plain `file://` URL.
 
 Press `F` to go fullscreen.
 
