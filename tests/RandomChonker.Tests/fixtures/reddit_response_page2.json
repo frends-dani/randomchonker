@@ -1,0 +1,35 @@
+{
+  "data": {
+    "children": [
+      {
+        "data": {
+          "id": "post_echo",
+          "title": "Mega chonk spotted",
+          "url": "https://i.redd.it/echo.jpg",
+          "score": 400,
+          "is_video": false,
+          "is_gallery": false,
+          "post_hint": "image",
+          "preview": {
+            "images": [{ "source": { "url": "https://i.redd.it/echo.jpg" } }]
+          }
+        }
+      },
+      {
+        "data": {
+          "id": "post_foxtrot",
+          "title": "Absolute sphere",
+          "url": "https://i.redd.it/foxtrot.jpg",
+          "score": 250,
+          "is_video": false,
+          "is_gallery": false,
+          "post_hint": "image",
+          "preview": {
+            "images": [{ "source": { "url": "https://i.redd.it/foxtrot.jpg" } }]
+          }
+        }
+      }
+    ],
+    "after": null
+  }
+}
