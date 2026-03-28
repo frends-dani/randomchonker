@@ -15,7 +15,7 @@ A single-file fullscreen slideshow of fat cats from [r/chonkers](https://www.red
 
 ## Usage
 
-Open `index.html` in any browser — no server needed. Press `F` to go fullscreen.
+Clone the repo and open `index.html` in any browser — no server needed. Press `F` to go fullscreen.
 
 Or just paste one of these into a terminal and go:
 
